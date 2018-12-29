@@ -13,7 +13,7 @@
         <!--Modal View Controller-->
         <scene sceneID="lbV-Re-KR1">
             <objects>
-                <viewController storyboardIdentifier="ModalViewController" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zou-S5-6HM" customClass="ModalViewController" customModule="Sample_modal_window" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModalViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zou-S5-6HM" customClass="ModalViewController" customModule="Sample_modal_window" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PG3-aS-j9K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,9 @@
                                         <state key="normal" title="OK">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onOk:" destination="Zou-S5-6HM" eventType="touchUpInside" id="fcW-0x-wqa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,6 +42,12 @@
                                     <constraint firstAttribute="height" constant="150" id="TKA-xr-yKq"/>
                                     <constraint firstAttribute="width" constant="240" id="WXK-rT-AFQ"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,6 +57,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MJz-PK-WsE"/>
                     </view>
+                    <connections>
+                        <outlet property="dialogView" destination="loP-Ne-bWj" id="pVv-1i-vas"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19s-Iq-l9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
