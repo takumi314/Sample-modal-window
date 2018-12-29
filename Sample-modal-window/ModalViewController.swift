@@ -8,7 +8,13 @@
 
 import UIKit
 
-class ModalViewController: UIViewController {
+final class ModalViewController: UIViewController {
+
+    static func make() -> ModalViewController {
+        let storyboard = UIStoryboard(name: "Modal", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ModalViewController")
+        return vc as! ModalViewController
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

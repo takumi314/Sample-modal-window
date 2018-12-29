@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onGlobalModal(_ sender: UIButton) {
-
+        let modal = ModalViewController.make()
+        GlobalModal.shared.present(modal, animated: true, completion: nil)
     }
 
 }
