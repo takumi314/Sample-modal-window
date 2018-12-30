@@ -13,7 +13,6 @@ final class ModalViewController: UIViewController {
     static func make() -> ModalViewController {
         let storyboard = UIStoryboard(name: "Modal", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "ModalViewController")
-        vc.view.alpha = 0.6
         vc.modalPresentationStyle = .overCurrentContext
         return vc as! ModalViewController
     }
