@@ -61,16 +61,24 @@
 		E1E2324A21D7ED6400B1AA1C /* Sample-modal-window */ = {
 			isa = PBXGroup;
 			children = (
+				E1E2326321D866B600B1AA1C /* Modal */,
 				E1E2324B21D7ED6400B1AA1C /* AppDelegate.swift */,
 				E1E2324D21D7ED6400B1AA1C /* ViewController.swift */,
 				E1E2324F21D7ED6400B1AA1C /* Main.storyboard */,
 				E1E2325221D7ED7A00B1AA1C /* LaunchScreen.storyboard */,
 				E1E2325521D7ED7A00B1AA1C /* Info.plist */,
+			);
+			path = "Sample-modal-window";
+			sourceTree = "<group>";
+		};
+		E1E2326321D866B600B1AA1C /* Modal */ = {
+			isa = PBXGroup;
+			children = (
 				E1E2325D21D7F2B000B1AA1C /* ModalViewController.swift */,
 				E1E2325F21D7F2E900B1AA1C /* Modal.storyboard */,
 				E1E2326121D7F54B00B1AA1C /* GlobalModal.swift */,
 			);
-			path = "Sample-modal-window";
+			path = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
