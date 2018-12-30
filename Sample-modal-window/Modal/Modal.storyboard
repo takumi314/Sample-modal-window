@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modal View Controller-->
+        <scene sceneID="lbV-Re-KR1">
+            <objects>
+                <viewController storyboardIdentifier="ModalViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zou-S5-6HM" customClass="ModalViewController" customModule="Sample_modal_window" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PG3-aS-j9K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loP-Ne-bWj">
+                                <rect key="frame" x="67.5" y="258.5" width="240" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIj-Oz-jEr">
+                                        <rect key="frame" x="70" y="100" width="100" height="30"/>
+                                        <color key="backgroundColor" red="0.3483292013" green="1" blue="0.81783893279999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="gmz-YL-Pj8"/>
+                                        </constraints>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onOk:" destination="Zou-S5-6HM" eventType="touchUpInside" id="fcW-0x-wqa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GIj-Oz-jEr" firstAttribute="centerX" secondItem="loP-Ne-bWj" secondAttribute="centerX" id="6Dh-RA-cny"/>
+                                    <constraint firstAttribute="bottom" secondItem="GIj-Oz-jEr" secondAttribute="bottom" constant="20" id="JIq-BA-z23"/>
+                                    <constraint firstAttribute="height" constant="150" id="TKA-xr-yKq"/>
+                                    <constraint firstAttribute="width" constant="240" id="WXK-rT-AFQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="loP-Ne-bWj" firstAttribute="centerY" secondItem="PG3-aS-j9K" secondAttribute="centerY" id="XSE-Fg-JpH"/>
+                            <constraint firstItem="loP-Ne-bWj" firstAttribute="centerX" secondItem="PG3-aS-j9K" secondAttribute="centerX" id="uRF-hy-wWc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MJz-PK-WsE"/>
+                    </view>
+                    <connections>
+                        <outlet property="dialogView" destination="loP-Ne-bWj" id="pVv-1i-vas"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19s-Iq-l9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>

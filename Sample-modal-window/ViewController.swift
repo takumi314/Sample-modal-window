@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func onGlobalModal(_ sender: UIButton) {
+        let modal = ModalViewController.make()
+        GlobalModal.shared.present(modal, animated: false, completion: nil)
+    }
 
 }
 
