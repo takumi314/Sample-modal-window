@@ -25,7 +25,8 @@ class GlobalModal {
         dismiss(animated: animated, completion: nil)
         
         let rootViewController = UIViewController()
-        rootViewController.view.backgroundColor = .clear
+        rootViewController.view.backgroundColor = .black
+        rootViewController.view.alpha = 0.4
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         rootViewController.present(viewController, animated: animated, completion: completion)

@@ -16,9 +16,19 @@ final class LoadingViewController: UIViewController {
     static func make() -> LoadingViewController {
         let storyboard = UIStoryboard(name: "Indicator", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "LoadingViewController")
-        vc.view.alpha = 0.7
+        vc.view.backgroundColor = .clear
         vc.modalPresentationStyle = .overCurrentContext
         return vc as! LoadingViewController
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        activityIndicator.startAnimating()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        activityIndicator.stopAnimating()
     }
 
 }

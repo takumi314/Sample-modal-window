@@ -20,5 +20,15 @@ class ViewController: UIViewController {
         GlobalModal.shared.present(modal, animated: false, completion: nil)
     }
 
+    @IBAction func onLoading(_ sender: UIButton) {
+        let loading = LoadingViewController.make()
+        GlobalModal.shared.present(loading, animated: false) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+                GlobalModal.shared.dismiss(animated: false, completion: nil)
+            })
+        }
+    }
+
+
 }
 
